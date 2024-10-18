@@ -27,8 +27,15 @@
  *  21 => 'Fizz'
  *
  */
-function getFizzBuzz(/* num */) {
-  throw new Error('Not implemented');
+function getFizzBuzz(num) {
+  if (num % 5 === 0 && num % 3 === 0) {
+    return 'FizzBuzz';
+  } if (num % 3 === 0) {
+    return 'Fizz';
+  } if (num % 5 === 0) {
+    return 'Buzz';
+  }
+  return num;
 }
 
 
@@ -88,8 +95,11 @@ function getSumBetweenNumbers(n1, n2) {
  *   10,1,1   =>  false
  *   10,10,10 =>  true
  */
-function isTriangle(/* a, b, c */) {
-  throw new Error('Not implemented');
+function isTriangle(a, b, c) {
+  if ((a + b) > c && (b + c) > a && (c + a) > b) {
+    return true;
+  }
+  return false;
 }
 
 
@@ -173,6 +183,14 @@ function isInsideCircle(/* circle, point */) {
  *   'entente' => null
  */
 function findFirstSingleChar(/* str */) {
+/*   let curStr = '';
+  for (let i = 0; i < str.length; i += 1) {
+    curStr = str.slice(i + 1);
+    if (curStr.indexOf(str[i]) === -1) {
+      return str[i];
+    }
+  }
+  return null; */
   throw new Error('Not implemented');
 }
 
